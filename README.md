@@ -18,7 +18,7 @@ The project covers collection, cleaning, database storage, modeling and visualiz
 
 ### Events Overview
 
-![Events Overview dashboard with Current Only selected](assets/events-overview.png)
+![Events Overview dashboard with Current Only selected](events-overview.png)
 
 The **Events Overview** page includes a country map, a country-by-category matrix, category shares, and the top five cities and genres by event count. Selecting a country or category lets me explore a smaller part of the dataset. For example, selecting Spain and Music shows the cities and genres represented in those listings.
 
@@ -32,7 +32,7 @@ These options do not indicate whether tickets are on sale or whether an event is
 
 ### Upcoming Events
 
-![Upcoming Events dashboard with the four-week calendar and three-month outlook](assets/activity-calendar.png)
+![Upcoming Events dashboard with the four-week calendar and three-month outlook](activity-calendar.png)
 
 The **Upcoming Events** page shows when events in the latest feed are scheduled. I can filter by country, city or segment to see which dates have the most listings.
 
