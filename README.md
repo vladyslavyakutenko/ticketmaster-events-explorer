@@ -16,6 +16,8 @@ The project covers collection, cleaning, database storage, modeling and visualiz
 
 ## Dashboard
 
+### Events Overview
+
 ![Events Overview dashboard with Current Only selected](assets/events-overview.png)
 
 The **Events Overview** page includes a country map, a country-by-category matrix, category shares, and the top five cities and genres by event count. Selecting a country or category lets me explore a smaller part of the dataset. For example, selecting Spain and Music shows the cities and genres represented in those listings.
@@ -27,6 +29,20 @@ The Event Status filter separates records by their presence in the latest comple
 - Selecting both includes all retained records.
 
 These options do not indicate whether tickets are on sale or whether an event is upcoming, completed or cancelled.
+
+### Upcoming Events
+
+![Upcoming Events dashboard with the four-week calendar and three-month outlook](assets/activity_calendar.png)
+
+The **Upcoming Events** page shows when events in the latest feed are scheduled. I can filter by country, city or segment to see which dates have the most listings.
+
+The calendar shows four Monday-to-Sunday weeks, starting with the current week. A dot marks today's date, and darker blue cells indicate more events. Earlier dates in the current week stay visible for context. Their counts can change as listings disappear from the feed.
+
+- **Upcoming Events – 4 Weeks** counts events from today through the final Sunday on the calendar.
+- **Busiest Day** shows the date with the most events in that period and the event count.
+- **Daily Average** divides the upcoming event count by the number of remaining calendar days, including today.
+
+**Average Weekly Distribution** compares weekdays across all four displayed weeks. **Scheduled Events – 3 Months** groups the listings already in the feed by week over the next three months.
 
 ## Data Source
 
@@ -99,6 +115,15 @@ These findings use the [country-by-category export](data/matrix.csv) with **Curr
 
 The main takeaway is that the overall category distribution needs country-level context. These are patterns in the collected Ticketmaster listings, not estimates of national market share or audience demand.
 
+### Upcoming Events – 3 November 2026
+
+The calendar covers **2-29 November 2026**, with country, city and segment all set to **All**.
+
+- **30,983 events are scheduled from 3 to 29 November**, an average of **1,148 per day** over 27 days. The 31 listings shown for Monday 2 November fall outside this total.
+- **Saturday is the busiest day of the week in all four weeks.** The four Saturdays have 1,922, 1,919, 2,018 and 2,140 listings, averaging about 2,000 per Saturday. Friday follows with an average of 1,405 and Sunday with 1,231.
+- **Saturday 28 November has the most listings on any upcoming date**, with 2,140 events.
+- **The feed shows fewer listings per week further into January 2027.** More events may be announced as those dates approach, and the final week in the chart may cover only part of a week. The outlook describes the listings available on 3 November and cannot establish a decline in attendance or ticket demand.
+
 ## Limitations
 
 - Coverage is limited to the collected Ticketmaster feed. It is not a complete list of European events.
@@ -154,4 +179,4 @@ The package versions above were read from the local environment. Installation an
 
 ## Future Improvements
 
-I plan to add an **Upcoming Weeks** page with a calendar showing event counts by date for a selected country, city or category. It will describe the density of listed events in the coming weeks, not ticket sales, venue occupancy or audience demand.
+I started working on a server deployment and plan to finish it by setting up a virtual machine for the Python pipeline and hosting the MySQL database on the server. Once both are in place, I plan to schedule the pipeline to fetch the Ticketmaster feed and update the database automatically.
