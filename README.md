@@ -32,7 +32,7 @@ These options do not indicate whether tickets are on sale or whether an event is
 
 ### Upcoming Events
 
-![Upcoming Events dashboard with the four-week calendar and three-month outlook](assets/activity_calendar.png)
+![Upcoming Events dashboard with the four-week calendar and three-month outlook](assets/activity-calendar.png)
 
 The **Upcoming Events** page shows when events in the latest feed are scheduled. I can filter by country, city or segment to see which dates have the most listings.
 
